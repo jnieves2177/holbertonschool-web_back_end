@@ -106,4 +106,4 @@ class Server:
                 payload['next_page'] = page + 1
 
         return payload
-   
+ 
