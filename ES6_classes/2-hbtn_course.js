@@ -16,7 +16,7 @@ export default class HolbertonCourse {
   }
 
   get name() { return this._name; }
- 
+
   // Length getter/setter method
   set length(newLength) {
     if (typeof newLength !== 'number') {
@@ -26,16 +26,16 @@ export default class HolbertonCourse {
     }
   }
 
-    get length() { return this._length; }
-  
-    // Students getter/setter method
-    set students(arrOfStudents) {
-      if (typeof arrOfStudents !== 'object') { throw new TypeError('Student array must be an array'); }
-      for (const student of arrOfStudents) {
-        if (typeof student !== 'string') { throw new TypeError('Students must only contain arrays'); }
-      }
-      this._students = arrOfStudents;
+  get length() { return this._length; }
+
+  // Students getter/setter method
+  set students(arrOfStudents) {
+    if (typeof arrOfStudents !== 'object') { throw new TypeError('Student array must be an array'); }
+    for (const student of arrOfStudents) {
+      if (typeof student !== 'string') { throw new TypeError('Students must only contain arrays'); }
     }
-  
-    get student() { return this._students; }
+    this._students = arrOfStudents;
+  }
+
+  get student() { return this._students; }
 }
