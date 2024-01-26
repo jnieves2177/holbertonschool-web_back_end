@@ -10,7 +10,7 @@ export default function handleProfileSignup(
   const promises = [signUpUser(firstName, lastName),
     uploadPhoto(fileName)];
 
-    return Promise.allSettled(promises)
+  return Promise.allSettled(promises)
     .then((values) => {
       const arr = [];
       values.forEach((value) => {
@@ -19,10 +19,10 @@ export default function handleProfileSignup(
         } else {
           arr.push({
             status: value.status,
-                        value: `Error: ${value.reason.message}`,
-                    });
-                }
-            });
-            return arr;
-        });
+            value: `Error: ${value.reason.message}`,
+          });
+        }
+      });
+      return arr;
+    });
 }
