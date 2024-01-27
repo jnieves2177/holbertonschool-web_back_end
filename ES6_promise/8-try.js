@@ -8,7 +8,7 @@ export default function divideFunction(numerator, denominator) {
     result = numerator / denominator;
   } catch (error) {
     console.log(error);
-    }
+  }
 
   return result;
 }
