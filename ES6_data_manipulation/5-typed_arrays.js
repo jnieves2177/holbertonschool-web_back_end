@@ -2,7 +2,7 @@
 const createInt8TypedArray = (length, position, value) => {
   const buffer = new ArrayBuffer(length);
   const int8View = new DataView(buffer);
-  
+
   try {
     int8View.setInt8(position, value);
   } catch (e) {
@@ -12,4 +12,4 @@ const createInt8TypedArray = (length, position, value) => {
   return int8View;
 };
 
-  export default createInt8TypedArray;
+export default createInt8TypedArray;
